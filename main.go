@@ -6,14 +6,14 @@ import (
 	"os"
 	"time"
 
-	"freefolks-fc/config"
+	"freefolks-fc/configs"
 	"freefolks-fc/db/gorm"
 
 	"github.com/labstack/echo/v4"
 )
 
 func main() {
-	config.Read()
+	configs.Read()
 	port := os.Getenv("APP_PORT")
 	fmt.Println(port)
 	server := &http.Server{
